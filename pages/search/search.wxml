@@ -1,0 +1,11 @@
+<import src="../common/movie-list/movie-list"/>
+<view class="container">
+  <view class="header">
+    <input class="search" type="text" password="{{false}}" placeholder="输入你想看的电影"  placeholder-class="search-placeholder" 
+    disabled="{{false}}" maxlength="140" bind:change="handleSearch">
+    </input>
+  </view>
+  <view class="bottom"> 
+    <template is="movie-list" data="{{ list, loading }}"/>
+  </view>
+</view>

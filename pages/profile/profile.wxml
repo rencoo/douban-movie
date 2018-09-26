@@ -1,0 +1,5 @@
+<view class="container">
+  <view class="header">
+    <text>{{subtitle}}</text>
+  </view>
+</view>

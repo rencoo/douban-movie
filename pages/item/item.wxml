@@ -1,0 +1,17 @@
+<wxs module="scoreFormat" src="../../filter/scoreFormat.wxs"></wxs>
+<view class="container">
+  <loading hidden="{{ !loading }}">加载中...</loading>
+  <view class="meta">
+    <image src="{{movie.images.large}}" mode="aspectFit" class="poster"/>
+    <text class="title">{{movie.title}}({{movie.year}})</text>
+    <view class="info">
+      <text>评分：{{scoreFormat.getScore(movie.rating.average)}}</text>
+      <text>导演：<block wx:for="{{movie.directors}}" wx:key="id">{{item.name}} </block></text>
+      <text>主演：<block wx:for="{{movie.casts}}" wx:key="id">{{item.name}} </block></text>
+    </view>
+    <view class="summary">
+      <text class="sum_title">摘要:</text>
+      <text class="sum_text">{{movie.summary}}</text>
+    </view>
+  </view>
+</view>

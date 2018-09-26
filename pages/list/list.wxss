@@ -1,0 +1,7 @@
+@import "../common/movie-list/movie-list.wxss";
+.header {
+  text-align: center;
+  padding: 30rpx;
+  border-bottom: 1rpx solid	#efefef
+} 
+
