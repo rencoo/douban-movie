@@ -13,5 +13,9 @@
       <text class="sum_title">摘要:</text>
       <text class="sum_text">{{movie.summary}}</text>
     </view>
+    <view class="reviews">
+      <text class="rev_title">热评:</text>
+      <block wx:for="{{movie.popular_reviews}}" wx:key="id"><text class="rev_summary">{{item.summary}}</text></block>
+    </view>
   </view>
 </view>

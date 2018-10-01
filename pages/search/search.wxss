@@ -10,3 +10,23 @@
 .search-placeholder{
   color: #ccc;
 }
+
+.tags {
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.search-tags {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+  font-size: 30rpx;
+}
+
+.tag {
+  padding: 5rpx;
+  margin-right: 15rpx;
+  border: 1rpx solid black;
+  border-radius: 15rpx; 
+  background: #F5F5F5;
+  cursor: pointer;
+}

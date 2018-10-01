@@ -5,6 +5,14 @@
     disabled="{{false}}" maxlength="140" bind:change="handleSearch">
     </input>
   </view>
+
+  <view hidden="{{isShow}}" class="tags">
+    <view>热门标签</view>
+    <view class="search-tags">
+      <text wx:for="{{hotTag}}" wx:key="{{id}}" data-tag="{{item}}" bindtap="searchByTag" class="tag">{{item}}</text>
+    </view>
+  </view>
+
   <view class="bottom"> 
     <template is="movie-list" data="{{ list, loading }}"/>
   </view>

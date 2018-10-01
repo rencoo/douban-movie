@@ -13,7 +13,10 @@ Page({
     list: [],
     search: '',
     loading: false,
-    hasNext: false
+    hasNext: false,
+    tag: '',
+    hotTag: ['动作', '喜剧', '爱情', '悬疑'],
+    isShow: false
   },
 
   loadMore () {
@@ -22,14 +25,14 @@ Page({
     const that = this
     if(!that.data.hasNext) return
 
-    that.setData({subtitle: '加载中...', loading: true})
-    return app.douban.getList('search', that.data.page++, that.data.count, that.data.search)
+    that.setData({subtitle: '加载中...', loading: true, isShow: false})
+    return app.douban.getList('search', that.data.page++, that.data.count,that.data.tag, that.data.search)
       .then(res => {
         console.log(res)
         if(res.subjects.length) {
-          that.setData({subtitle: res.title, list: that.data.list.concat(res.subjects), loading: false })
+          that.setData({subtitle: res.title, list: that.data.list.concat(res.subjects), loading: false, isShow: true })
         } else {
-          that.setData({ subtitle: res.title, hasNext: false, loading: false })
+          that.setData({ subtitle: res.title, hasNext: false, loading: false, isShow: false })
         }
       })
       .catch(err => {
@@ -44,6 +47,17 @@ Page({
     if (!evt.detail.value) return
     that.setData({ list: [], page: 1})
     that.setData({subtitle: '加载中...', hasNext: true, loading: true, search: evt.detail.value })
+   
+    that.loadMore()
+  },
+
+  searchByTag (evt) {
+    var that = this
+    const target = evt.currentTarget
+    const tag = target.dataset.tag
+
+    that.setData({ list: [], page: 1})
+    that.setData({subtitle: '加载中...', hasNext: true, loading: true, tag: tag })
    
     that.loadMore()
   }

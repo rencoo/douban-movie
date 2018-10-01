@@ -14,6 +14,7 @@ Page({
     app.douban.getItem(params.id)
       .then(res => {
         console.log(res)
+        console.log(res.popular_reviews)
         that.setData({
           movie: res,
           loading: false
