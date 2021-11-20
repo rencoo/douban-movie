@@ -1,37 +1,42 @@
 {
-  "pages":[
+  "pages": [
     "pages/board/board",
     "pages/search/search",
     "pages/profile/profile",
     "pages/item/item",
     "pages/list/list"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#354951",
     "navigationBarTitleText": "豆瓣电影",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#999999",
     "selectedColor": "#35495e",
     "borderStyle": "white",
     "backgroundColor": "#f5f5f5",
-    "list": [{
-      "pagePath": "pages/board/board",
-      "text": "榜单",
-      "iconPath": "images/board.png",
-      "selectedIconPath": "images/board-active.png"
-    },{
-      "pagePath": "pages/search/search",
-      "text": "搜索",
-      "iconPath": "images/search.png",
-      "selectedIconPath": "images/search-active.png"
-    },{
-      "pagePath": "pages/profile/profile",
-      "text": "我的",
-      "iconPath": "images/profile.png",
-      "selectedIconPath": "images/profile-active.png"
-    }]
-  }
+    "list": [
+      {
+        "pagePath": "pages/board/board",
+        "text": "榜单",
+        "iconPath": "images/board.png",
+        "selectedIconPath": "images/board-active.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "搜索",
+        "iconPath": "images/search.png",
+        "selectedIconPath": "images/search-active.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "images/profile.png",
+        "selectedIconPath": "images/profile-active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
 }

@@ -1,22 +1,23 @@
 /**
- * Douban API 模块
+ * API 模块
  * @type {Object}
  */
 const douban = require('./utils/douban.js')
+
 //app.js
 App({
   data: {
     city: '北京'
   },
   /**
-     * Douban API
-     */
+   * Douban API
+   */
   douban: douban,
   onLaunch: function () {
-    // wechat 
-    //   .getLocation()
-    //   .then(res => {
-
-    //   })
+    wechat
+      .getLocation()
+      .then(res => {
+        console.log(res)
+      })
   }
 })

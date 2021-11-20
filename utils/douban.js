@@ -1,6 +1,6 @@
 // https://api.douban.com/v2/movie/
 // const baseUrl = 'http://127.0.0.1:8010' // 考虑写到app.js以公享
-const baseUrl = 'https://douban.uieee.com/v2/movie/'
+const baseUrl = 'https://movie.douban.com'
 const Fetch = require('./fetch')
 
 /**
