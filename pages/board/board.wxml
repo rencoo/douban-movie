@@ -1,22 +1,19 @@
 <view class="container">
-
   <view class="silder">
     <swiper indicator-dots="true" autoplay="true" interval="8000" duration="500">
       <block wx:for="{{list}}" wx:key="item.id">
         <swiper-item>
-          <image src="{{item.images.medium}}" class="slide-image" mode="aspectFill"/>
+          <image src="{{item.images.medium}}" class="slide-image" mode="aspectFill" />
         </swiper-item>
       </block>
     </swiper>
   </view>
-
   <view class="middle">
     <view class="title">
       <text>豆瓣电影榜单集合</text>
     </view>
     <text>最新、最IN的影视信息收集</text>
   </view>
-
   <view class="board">
     <navigator url="../list/list?type=in_theaters&name=正在热映" hover-class="none">
       <view class="board-item">
@@ -43,5 +40,4 @@
       </view>
     </navigator>
   </view>
-
 </view>

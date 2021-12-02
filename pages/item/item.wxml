@@ -2,12 +2,18 @@
 <view class="container">
   <loading hidden="{{ !loading }}">加载中...</loading>
   <view class="meta">
-    <image src="{{movie.images.large}}" mode="aspectFit" class="poster"/>
+    <image src="{{movie.images.large}}" mode="aspectFit" class="poster" />
     <text class="title">{{movie.title}}({{movie.year}})</text>
     <view class="info">
       <text>评分：{{scoreFormat.getScore(movie.rating.average)}}</text>
-      <text>导演：<block wx:for="{{movie.directors}}" wx:key="id">{{item.name}} </block></text>
-      <text>主演：<block wx:for="{{movie.casts}}" wx:key="id">{{item.name}} </block></text>
+      <text>
+        导演：
+        <block wx:for="{{movie.directors}}" wx:key="id">{{item.name}}</block>
+      </text>
+      <text>
+        主演：
+        <block wx:for="{{movie.casts}}" wx:key="id">{{item.name}}</block>
+      </text>
     </view>
     <view class="summary">
       <text class="sum_title">摘要:</text>
@@ -15,7 +21,9 @@
     </view>
     <view class="reviews">
       <text class="rev_title">热评:</text>
-      <block wx:for="{{movie.popular_reviews}}" wx:key="id"><text class="rev_summary">{{item.summary}}</text></block>
+      <block wx:for="{{movie.popular_reviews}}" wx:key="id">
+        <text class="rev_summary">{{item.summary}}</text>
+      </block>
     </view>
   </view>
 </view>

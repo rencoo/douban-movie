@@ -1,19 +1,17 @@
-<import src="../common/movie-list/movie-list"/>
+<import src="../common/movie-list/movie-list" />
 <view class="container">
   <view class="header">
-    <input class="search" type="text" password="{{false}}" placeholder="输入你想看的电影"  placeholder-class="search-placeholder" 
-    disabled="{{false}}" maxlength="140" bind:change="handleSearch">
-    </input>
+    <input class="search" type="text" password="{{false}}" placeholder="输入你想看的电影" placeholder-class="search-placeholder" disabled="{{false}}" maxlength="140" bind:change="handleSearch"></input>
   </view>
-
   <view hidden="{{isShow}}" class="tags">
     <view>热门标签</view>
     <view class="search-tags">
-      <text wx:for="{{hotTag}}" wx:key="{{id}}" data-tag="{{item}}" bindtap="searchByTag" class="tag">{{item}}</text>
+      <text wx:for="{{hotTag}}" wx:key="{{id}}" data-tag="{{item}}" bindtap="searchByTag" class="tag">
+        {{item}}
+      </text>
     </view>
   </view>
-
-  <view class="bottom"> 
-    <template is="movie-list" data="{{ list, loading }}"/>
+  <view class="bottom">
+    <template is="movie-list" data="{{ list, loading }}" />
   </view>
 </view>

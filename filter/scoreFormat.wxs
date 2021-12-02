@@ -1,10 +1,10 @@
 var ScoreFr = {
   getScore: function (score) {
-    if(!score && score !== 0) return ''
-    return score.toFixed(1)
+    if (!score && score !== 0) return '';
+    return score.toFixed(1);
   }
- }
+};
 
- module.exports = {
-   getScore: ScoreFr.getScore
- }
+module.exports = {
+  getScore: ScoreFr.getScore
+};

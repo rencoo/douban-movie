@@ -2,7 +2,7 @@
  * API 模块
  * @type {Object}
  */
-const douban = require('./utils/douban.js')
+const douban = require('./utils/douban.js');
 
 //app.js
 App({
@@ -14,10 +14,8 @@ App({
    */
   douban: douban,
   onLaunch: function () {
-    wechat
-      .getLocation()
-      .then(res => {
-        console.log(res)
-      })
+    wechat.getLocation().then((res) => {
+      console.log(res);
+    });
   }
-})
+});
